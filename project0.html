@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <!-- Specifies the character set for the document -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on different screen sizes -->
+<meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Ensures compatibility with older versions of Internet Explorer -->
+<title>Anytime, Anywhere Fitness</title> <!-- The title that appears on the browser tab -->
+
+<!-- Link to Google Fonts for custom text styles -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: url('https://th.bing.com/th/id/R.797e4ba481b7b05e44b8b749f0d1c327?rik=SokVKL5zrsefSg&riu=http%3a%2f%2fwww.factstoday.in%2fwp-content%2fuploads%2f2017%2f12%2f2.jpg&ehk=XxqlVV81nEfGpVm%2b8ou4NvuJErOKDW%2fhYm%2f75QWaQM4%3d&risl=&pid=ImgRaw&r=0') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire screen */
+}
+
+/* Header Section Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(38, 38, 64, 0.8); /* Semi-transparent background for the header */
+}
+
+/* Logo and title container */
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    width: 100px; /* Size for the logo */
+    margin-right: 10px; /* Space between the logo and title text */
+}
+
+.left div {
+    font-size: 50px; /* Font size for the fitness center title */
+    font-weight: bold;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.navbar li {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Navigation link styles */
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.navbar li a:hover {
+    color: #d4af37; /* Gold color for hover effect */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(38, 38, 64, 0.9);
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown li {
+    padding: 10px 20px;
+}
+
+.dropdown li a {
+    color: white;
+    font-size: 16px;
+}
+
+/* Show dropdown on hover */
+.navbar li:hover .dropdown {
+    display: block;
+}
+
+/* Query form dropdown box styles */
+.query-box {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Query form input and button styles */
+.query-box input, .query-box select, .query-box button {
+    width: calc(100% - 40px); /* Full width minus padding */
+    margin: 10px 20px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+}
+
+.query-box button {
+    background-color: #4e4e73;
+    color: white;
+    cursor: pointer;
+}
+
+.query-box button:hover {
+    background-color: #3b3b5c;
+}
+
+/* Footer Section Styles */
+footer {
+    background-color: #262640;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Footer links hover effect */
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Container for welcome message */
+.container {
+    padding: 150px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.highlight-box {
+    background-color: black;
+    color: #ffea99; /* Lighter yellow color */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: normal; /* Remove bold text */
+    display: inline-block;
+}
+</style>
+</head>
+<body>
+<header>
+    <!-- Logo and brand title -->
+    <div class="left">
+    <img src="https://th.bing.com/th/id/OIP.OL_ksucKJjDW4ESDktE0lAHaFn?rs=1&pid=ImgDetMain" alt="Gym Logo">
+    <div>Anytime, Anywhere Fitness</div>
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#">Query</a>
+                <ul class="dropdown">
+                    <li>
+                        <div class="query-box">
+                            <!-- Input fields for the query form -->
+                            <input type="text" placeholder="Name" required>
+                            <input type="tel" placeholder="Phone No." required>
+                            <select required>
+                                <option value="" disabled selected>Membership Duration</option>
+                                <option value="1-month">1 Month</option>
+                                <option value="3-months">3 Months</option>
+                                <option value="6-months">6 Months</option>
+                                <option value="1-year">1 Year</option>
+                            </select>
+                            <input type="time" placeholder="Preferred Call Back Time" required>
+                            <button>Submit</button>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#" class="active">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul class="dropdown">
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs</a>
+                <ul class="dropdown">
+                    <li><a href="#">Strength Training</a></li>
+                    <li><a href="#">Cardio</a></li>
+                    <li><a href="#">Yoga</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main content area -->
+<div class="container">
+    <h1>Welcome to Anytime, Anywhere Fitness</h1>
+    <p>
+    <span class="highlight-box">Take the first step towards a healthier, stronger you with our unbeatable pricing plans. Let's sweat, achieve, and conquer together! Unleash your potential and embark on a journey towards a stronger, fitter, and more confident you. Sign up for 'Make Your Body Shape' now and witness the incredible transformation your body is capable of!</span>
+    </p>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>© 2025 Anytime, Anywhere Fitness. All rights reserved.</p>
+    <p>Aditya Mall, 2nd floor, New Delhi | +91 76792 66890 | contact@anytimeanywherefitness.com</p>
+    <p>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+    </p>
+</footer>
+</body>
+</html>
